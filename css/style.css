@@ -1,0 +1,731 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --main-color: hsl(243, 100%, 93%);
+    --secondary-color: hsl(229, 7%, 55%);
+    --thrid-color: hsl(228, 56%, 26%);
+    --four-color: hsl(229, 57%, 11%);
+    --gr1-color: hsl(6, 100%, 80%);
+    --gr2-color: hsl(335, 100%, 65%);
+}
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+}
+header{
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    z-index: 2;
+    transition: 0.5s;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-inline: 30px;
+}
+@media(max-width: 767px){
+    header .container{
+        padding-inline: 10px;
+    }
+}
+header .logo span{
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    transition: 0.5s;
+}
+header .logo span:hover{
+    cursor: pointer;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+@media(max-width: 767px){
+    header ul{
+        display: none;
+    }
+}
+header i{
+    color: white;
+    font-size: 20px;
+    display: none !important;
+}
+@media(max-width: 767px){
+    header i{
+        display: block !important;
+    }
+}
+header a{
+   text-decoration: none;
+   font-size: 16px;
+   color: white;
+   font-weight: 700;
+   transition: 0.5s;
+}
+header a:hover{
+    color: red;
+}
+header .active{
+    color: red;
+} 
+.information{
+    background-image: url(../imgs/hero\ img.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.information::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.information .content{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+.information .content p{
+    font-size: 22px;
+    font-weight: bold;
+}
+.information .content h1{
+    text-transform: uppercase;
+    font-size: 30px;
+    color: red;
+}
+.section{
+    overflow: hidden;
+}
+.sectionOne{
+    margin-top: 40px;
+}
+.sectionOne .container{
+    margin: auto;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+@media(max-width: 767px){
+    .sectionOne .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+.sectionOne .shape{
+    width: 40%;
+}
+@media(max-width: 767px){
+    .sectionOne .shape{
+        width: 100%;
+    }
+}
+.sectionOne .border{
+    border: 10px solid #555;
+    border-radius: 10px;
+}
+@media(max-width:767px){
+    .sectionOne .border{
+        border: 0;
+    }
+}
+.sectionOne .image{
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+@media(max-width:767px){
+    .sectionOne .image{
+        top: 0;
+        left: 0;
+    }
+}
+.sectionOne img{
+    width: 100%;
+    border-radius: 10px;
+}
+.sectionOne .image .media{
+    position: absolute;
+    background-color: #5555558f;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 0;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    visibility: hidden;
+    transition: 1s;
+} 
+.sectionOne .image:hover .media{
+    transition: 1s;
+    height: 100%;
+    visibility: visible;
+}
+.sectionOne .media i{
+    color: white;
+    margin-left: 10px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.sectionOne .media i:hover{
+    color: red;
+    cursor: pointer;
+}
+.sectionOne .box{
+    width: 40%;
+}
+@media(max-width: 767px){
+    .sectionOne .box{
+        width: 100%;
+    }
+}
+.sectionOne .content p:first-child{
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+}
+.sectionOne .content p::before{
+    content: "";
+    position: absolute;
+    height: 22px;
+    width: 5px;
+    background-color: red;
+    left: -10px;
+    top: 11px;
+}
+.sectionOne .content p:last-child{
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-bottom: 1px dashed;
+    padding-bottom: 15px;
+}
+.sectionOne .tables{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.sectionOne .tables .info{
+    display: flex;
+    gap: 30px;
+    width: 430px;
+}
+@media(max-width: 767px){
+    .sectionOne .tables .info{
+        flex-direction: column;
+        gap: 0;
+    }
+}
+.sectionOne .tables .info ul{
+    list-style: none;
+    padding-left: unset !important;
+    margin-bottom: unset !important;
+}
+.sectionOne .tables li{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.sectionOne .tables span{
+    font-size: 12px;
+    color: gray;
+    font-weight: 300;
+}
+.tables button{
+    margin-top: 15px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    transition: 0.5s;
+}
+.btn{
+    display: flex;
+}
+@media(max-width: 767px){
+    .btn{
+        flex-direction: column;
+        padding: 0;
+    }
+}
+.tables .one{
+    width: 200px;
+    margin-right: 10px;
+}
+.tables .two {
+    width: 140px;
+}
+.tables button:hover{
+   background-color: orangered;
+   cursor: pointer;
+}
+.tables button i{
+    margin-left: 10px;
+}
+.sectionTwo{
+    margin-top: 60px;
+    background-color: #ddd;
+}
+h2{
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+h2::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 8px;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h2::before{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 1px;
+    background-color: red;
+    bottom: -21px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sectionTwo .container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.sectionTwo .boxes{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    padding-bottom: 50px;
+}
+.sectionTwo .box{
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.sectionTwo .box .overlay{
+    position: absolute;
+    content: "";
+    background-color: white;
+    box-shadow: 0 1px 10px 0px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    opacity: 0;
+    z-index: -1;
+    transform: scale(0);
+    transition: scale 3s , box-shadow 2s;
+}
+.sectionTwo .box:hover .overlay{
+    opacity: 1;
+    transform: scale(1);
+}
+.sectionTwo i{
+    color: red;
+}
+.sectionTwo h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.sectionTwo p{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    color: gray;
+}
+.sectionThree{
+    margin-top: 60px;
+}
+.sectionThree .container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.sectionThree ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+@media(max-width: 767px){
+    .sectionThree ul{
+        gap: 10px;
+    }
+}
+.sectionThree ul li{
+    font-weight: 400;
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+}
+@media(max-width: 767px){
+    .sectionThree ul li{
+        font-size: 14px;
+    }
+}
+.sectionThree ul li:first-child{
+    color: red;
+}
+.sectionThree .images{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 30px;
+}
+@media(max-width: 767px){
+    .sectionThree .images{
+        grid-template-columns:  minmax(200px, 1fr);
+    }
+}
+.sectionThree .image{
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    background-color: #5555558f;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+.overlay:hover{
+    opacity: 1;
+}
+.sectionThree img{
+    width: 100%;
+}
+.sectionFour{
+    margin-top: 60px;
+    background-color: #ddd;
+}
+.sectionFour .container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+@media(max-width: 767px){
+    .sectionFour .container{
+        flex-direction: column;
+    }
+}
+.sectionFour .container .box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.sectionFour .container .box i{
+    color: red;
+}
+.sectionFour .container span{
+    font-size: 30px;
+    font-weight: bold;
+}
+.sectionFour .container .box p{
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: gray;
+}
+.sectionFive{
+    margin-top: 30px;
+}
+.sectionFive .container{
+    background-color: #ddd;
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px;
+    width: 550px;
+    overflow: hidden;
+    display: flex;
+    border-radius: 10px;
+    position: relative;
+}
+.sectionFive .container::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: solid red 70px;
+    border-color: red transparent transparent red;
+}
+@media(max-width: 767px){
+    .sectionFive .container{
+        width: 90%;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.sectionFive .image{
+    width: 30%;
+    z-index: 1;
+}
+.sectionFive img{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+.sectionFive .content{
+    width: 70%;
+}
+@media(max-width:767px){
+    .sectionFive .content{
+        width: 100%;
+    }
+}
+.sectionFive .content h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.sectionFive span{
+   color: gray;
+   font-weight: bold;
+}
+.sectionFive i{
+    margin-right: 5px;
+}  
+.sectionFive p{
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: gray;
+}
+.sectionFive .stars{
+    margin-top: 20px;
+}
+.sectionFive .stars i:not(:last-child){
+    color: orange;
+}
+.sectionFive .stars i:last-child{
+    color: white;
+}
+.sectionSix{
+    margin-top: 50px;
+    background-color: #ddd;
+}
+.sectionSix .container{
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding-bottom: 50px;
+}
+@media(max-width: 767px){
+    .sectionSix .container{
+        grid-template-columns:  minmax(200px, 1fr);
+    }
+}
+.sectionSix .container .box{
+    background-color: white;
+}
+.sectionSix .box img{
+    width: 100%;
+}
+.sectionSix .container .content{
+    padding: 20px;
+}
+.sectionSix span{
+    font-size: 14px;
+    color: gray;
+}
+.sectionSix h3{
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: 700;
+}
+.sectionSix p{
+    color: gray;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.sectionSix a{
+    font-weight: 400;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.sectionSix a:hover{
+    color: red !important;
+    cursor: pointer;
+}
+.sectionSix i{
+    margin-left: 5px;
+}
+.sectionSeven{
+    margin-top: 30px;
+}
+.sectionSeven .container{
+   margin-top: 50px;
+   display: flex;
+   justify-content: center;
+}
+.sectionSeven form .one{
+    display: flex;
+    gap: 10px;
+}
+@media(max-width: 767px){
+    .sectionSeven form .one{
+        flex-direction: column;
+    }
+}
+.sectionSeven p{
+    display: none;
+    margin-top: 10px;
+    color: red;
+}
+.sectionSeven .inOne , .sectionSeven .inTwo{
+    height: 40px;
+    width: 320px;
+    outline: none;
+}
+@media(max-width: 767px){
+    .sectionSeven .inTwo{
+        margin-top: 20px;
+    }
+}
+.sectionSeven .inThree{
+    display: block;
+    margin-top: 20px;
+    width: 649px;
+    height: 40px;
+    outline: none;
+}
+.sectionSeven textarea{
+    width: 649px;
+    height: 100px;
+    margin-top: 20px;
+    outline: none;
+}
+.sectionSeven button{
+    display: block;
+    border-radius: 10px;
+    outline: none;
+    width: 160px;
+    height: 40px;
+    margin-top: 30px;
+    color: white;
+    background-color: red;
+    transition: 0.5s;
+}
+.sectionSeven button:hover{
+    background-color: orange;
+}
+.inputs{
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+@media(max-width: 767px){
+    .inputs{
+        width: 100% !important;
+    }
+}
+.inputs:focus{
+    border-color: red;
+    box-shadow: 0px 1px 8px pink;
+}
+footer{
+    background-color: #5555558f;
+    margin-top: 50px;
+}
+footer .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    color: white;
+}
+footer i{
+    margin-left: 20px;
+    transition: 0.5s;
+}
+footer i:hover{
+    color: red;
+    cursor: pointer;
+}
+footer span{
+    font-weight: bold;
+    color: red;
+    transition: 0.5s;
+}
+footer span:hover{
+   text-decoration: underline;
+   cursor: pointer;
+}
+footer p{
+    text-align: center;
+}
+
